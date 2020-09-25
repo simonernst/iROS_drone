@@ -7,13 +7,32 @@
 
 ## Installation
 
-** TODO
+In a catkin workspace :
+
+Ubuntu 16.04
+```bash
+git clone https://github.com/simonernst/iROS_drone
+```
+Ubuntu 18.04
+```bash
+git clone -b ubuntu18 https://github.com/simonernst/iROS_drone
+```
+
+
+
 
 
 ## Utilisation
 
-** TODO
 
+Lancement mode simulateur
+```bash
+roslaunch 
+```
+Lancement mode réel
+```bash
+
+```
 
 ## Debug
 
