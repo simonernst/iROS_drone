@@ -1,10 +1,5 @@
 # iROS_drone
 
-## Description
-
-
-
-
 ## Prise en main et installation
 
 1. Créez votre workspace (cf Tuto ROS si besoin)
