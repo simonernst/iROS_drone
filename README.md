@@ -1,5 +1,10 @@
 # iROS_drone
 
+## Prérequis
+
+- Ubuntu 16.04
+- ROS Kinetic + Gazebo 7
+
 ## Prise en main et installation
 
 1. Créez votre workspace (cf Tuto ROS si besoin)
