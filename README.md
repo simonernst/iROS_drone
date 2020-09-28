@@ -14,7 +14,8 @@
 cd $Votre_Workspace/src
 git clone https://github.com/simonernst/iROS_drone
 git clone https://github.com/ros-drivers/joystick_drivers
-cd $Votre_Workspace
+git clone https://github.com/AutonomyLab/bebop_autonomy
+cd ..
 rosdep update
 rosdep install --from-paths src -i
 catkin build
