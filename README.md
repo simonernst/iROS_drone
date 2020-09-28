@@ -2,83 +2,36 @@
 
 ## Description
 
-** TODO
 
 
-## Installation
 
-In a catkin workspace :
+## Prise en main et installation
 
-Ubuntu 16.04
+1. Créez votre workspace (cf Tuto ROS si besoin)
+2. Depuis votre workspace
+
 ```bash
+cd $Votre_Workspace/src
 git clone https://github.com/simonernst/iROS_drone
+git clone https://github.com/ros-drivers/joystick_drivers
+cd $Votre_Workspace
+rosdep update
+rosdep install --from-paths src -i
+catkin build
 ```
-Ubuntu 18.04
-```bash
-git clone -b ubuntu18 https://github.com/simonernst/iROS_drone
-```
 
-
-
-
+Ne pas oublier de sourcer son workspace après chaque compilation (```source devel/setup.bash```). Je vous recommande de l'écrire dans votre .bashrc
 
 ## Utilisation
 
 
 Lancement mode simulateur
 ```bash
-roslaunch 
+roslaunch rotors_gazebo mav_velocity_control_with_fake_driver.launch
 ```
 Lancement mode réel
 ```bash
-
+roslaunch bebop_driver bebop_node.launch
 ```
 
 ## Debug
-
-
-
-## TODO
-
-### Dev
- - add gazebo models + directement intégré au pkg
- - add rotor_ws
- - add bebop_autonomy
- - add special launch file
- - values in range (fake_driver.cpp)
- - asservissement position
- - land/takeoff/stop -> position controller
- 
- ### Admin
- - Rendu TP ?
- - Notation ?
- - Vidéo ?
- 
- 
- ### Sujet TP
- sujet TP (reprendre ancien + ajouter dev)
- Word -> PDF // Github wiki
- 
- #### Partie 1 : Simulation
-  - Prise en main de ROS (topic / rviz / rqt / dynamic reconfigure) -> demander des preuves
-  - Développement interface manette
-  - Mode Surveillance / Loisir -> Service
-  
-  
-  
- #### Partie 2 : Réel
-  - Test sur drone réel
-  - Ajout de nouvelles commandes (Flips G/D F/B)
-  
-  Idées
-  - commande en navigation
-  - GPS
-  - ROS actions
-  - rosbag
-  - Section bonnes pratiques et bon à savoir
-  - Multidrones
-  - Reconnaissance de personnes via drone (genre détection -> centrage -> prise d'une photo via snapshot)
-      -> ecoute topic sur reconnaissance personne + prise d'une photo via un service (extension mode surveillance)
-
- 
- 
