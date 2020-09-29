@@ -184,8 +184,8 @@ void joy_callback(const sensor_msgs::JoyConstPtr& msg){
 
 void odom_callback(const nav_msgs::OdometryConstPtr& msg){
   
-  if(joy_msg_ready == false || joy_enable == false)
-    return;
+//  if(joy_msg_ready == false || joy_enable == false)
+//    return;
  
   odom_msg = *msg;
   static ros::Time prev_time = ros::Time::now();
