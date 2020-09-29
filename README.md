@@ -13,8 +13,8 @@
 ```bash
 sudo apt-get install build-essential python-rosdep python-catkin-tools
 cd $Votre_Workspace/src
-git clone https://github.com/simonernst/iROS_drone
-git clone -b melodic https://github.com/ros-drivers/joystick_drivers
+git clone -b melodic https://github.com/simonernst/iROS_drone
+git clone https://github.com/ros-drivers/joystick_drivers
 git clone https://github.com/AutonomyLab/bebop_autonomy
 cd ..
 rosdep update
