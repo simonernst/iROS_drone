@@ -11,6 +11,7 @@
 2. Depuis votre workspace
 
 ```bash
+sudo apt-get install build-essential python-rosdep python-catkin-tools
 cd $Votre_Workspace/src
 git clone https://github.com/simonernst/iROS_drone
 git clone https://github.com/ros-drivers/joystick_drivers
