@@ -15,7 +15,7 @@ sudo apt-get install build-essential python-rosdep python-catkin-tools
 cd $Votre_Workspace/src
 git clone https://github.com/simonernst/iROS_drone
 git clone https://github.com/ros-drivers/joystick_drivers
-git clone https://github.com/anqixu/bebop_autonomy.git
+git clone https://github.com/AutonomyLab/bebop_autonomy.git
 cd ..
 (pas besoin)rosdep update
 (pas besoin)rosdep install --from-paths src -i
