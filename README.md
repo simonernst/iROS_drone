@@ -2,8 +2,8 @@
 
 ## Prérequis
 
-- Ubuntu 18.04
-- ROS Kinetic + Gazebo 9
+- Ubuntu 16.04
+- ROS Kinetic + Gazebo 7
 
 ## Prise en main et installation
 
@@ -13,7 +13,7 @@
 ```bash
 sudo apt-get install build-essential python-rosdep python-catkin-tools
 cd $Votre_Workspace/src
-git clone -b melodic https://github.com/simonernst/iROS_drone
+git clone https://github.com/simonernst/iROS_drone
 git clone https://github.com/ros-drivers/joystick_drivers
 git clone https://github.com/anqixu/bebop_autonomy.git
 cd ..
