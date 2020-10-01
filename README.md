@@ -17,8 +17,8 @@ git clone https://github.com/simonernst/iROS_drone
 git clone https://github.com/ros-drivers/joystick_drivers
 git clone https://github.com/AutonomyLab/bebop_autonomy.git
 cd ..
-(pas besoin)rosdep update
-(pas besoin)rosdep install --from-paths src -i
+rosdep update
+rosdep install --from-paths src -i
 catkin build
 ```
 
