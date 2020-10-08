@@ -2,38 +2,27 @@
 
 ## Prérequis
 
-- Ubuntu 18.04
-- ROS Melodic + Gazebo 9
+- Ubuntu 20.04
+- ROS Noetic 
+## Installation
 
-## Prise en main et installation
-
-1. Créez votre workspace (cf Tuto ROS si besoin)
-2. Depuis votre workspace
 
 ```bash
-sudo apt-get install build-essential python-rosdep python-catkin-tools
-cd $Votre_Workspace/src
-git clone -b melodic https://github.com/simonernst/iROS_drone
+mkdir -p bebop_ws/src && cd bebop_ws/src
+
+sudo apt install build-essential python3-rosdep python3-catkin-tools
+sudo apt install libusb-dev python3-osrf-common libspnav-dev libbluetooth-dev libcwiid-dev libgoogle-glog-dev
+sudo apt install ros-noetic-mavros ros-noetic-octomap-ros 
+
+git clone https://github.com/ethz-asl/mav_comm
+git clone -b noetic https://github.com/simonernst/iROS_drone
 git clone https://github.com/ros-drivers/joystick_drivers
-git clone https://github.com/anqixu/bebop_autonomy.git
+
 cd ..
-rosdep update
-rosdep install --from-paths src -i
 catkin build
 ```
 
-Ne pas oublier de sourcer son workspace après chaque compilation (```source devel/setup.bash```). Je vous recommande de l'écrire dans votre .bashrc
-
-## Utilisation
-
-
-Lancement mode simulateur
+##### Lancement mode simulateur
 ```bash
 roslaunch rotors_gazebo mav_velocity_control_with_fake_driver.launch
 ```
-Lancement mode réel
-```bash
-roslaunch bebop_driver bebop_node.launch
-```
-
-## Debug
