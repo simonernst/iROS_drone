@@ -1,5 +1,7 @@
 # iROS_drone
 
+Pour toute question ou problème lié au TP drone (hors séance de TP), merci d'ouvrir une issue sur le repo suivant : https://github.com/simonernst/TP_drone/issues
+
 ## Prérequis
 
 - Ubuntu 16.04
