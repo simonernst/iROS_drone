@@ -9,20 +9,22 @@ Pour tout problème de compilation et d'erreurs liées à la simulation, merci d
 - Ubuntu 16.04
 - ROS Kinetic + Gazebo 7
 
-Si autre version de ROS :
+Si vous utilisez une autre version de ROS :
 
-MELODIC (**Ubuntu 18**) voir [ici](https://github.com/simonernst/iROS_drone/tree/melodic)
+ROS MELODIC (**Ubuntu 18**) voir [ici](https://github.com/simonernst/iROS_drone/tree/melodic)
 
-NOETIC (**Ubuntu 20**) voir [ici](https://github.com/simonernst/iROS_drone/tree/noetic)
+ROS NOETIC (**Ubuntu 20**) voir [ici](https://github.com/simonernst/iROS_drone/tree/noetic)
 
-## Prise en main et installation
+1. Création d'un workspace
+```bash
+mkdir -p ~/$VOTRE_WORKSPACE/src
+```
 
-1. Créez votre workspace (cf Tuto ROS si besoin)
 2. Depuis votre workspace
 
 ```bash
+cd ~/$VOTRE_WORKSPACE/src
 sudo apt-get install build-essential python-rosdep python-catkin-tools
-cd $Votre_Workspace/src
 git clone https://github.com/simonernst/iROS_drone
 git clone https://github.com/ros-drivers/joystick_drivers
 git clone https://github.com/AutonomyLab/bebop_autonomy.git
@@ -32,18 +34,16 @@ rosdep install --from-paths src -i
 catkin build
 ```
 
-Ne pas oublier de sourcer son workspace après chaque compilation (```source devel/setup.bash```). Je vous recommande de l'écrire dans votre .bashrc
+Ne pas oublier de sourcer son workspace après chaque compilation (```source devel/setup.bash```). 
 
 ## Utilisation
+Deux modes sont disponibles suivant la partie du TP dans laquelle vous serez:
 
-
-Lancement mode simulateur
+- Lancement mode simulateur
 ```bash
 roslaunch rotors_gazebo mav_velocity_control_with_fake_driver.launch
 ```
-Lancement mode réel
+- Lancement mode réel
 ```bash
 roslaunch bebop_driver bebop_node.launch
 ```
-
-## Debug
