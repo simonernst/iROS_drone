@@ -26,11 +26,10 @@ rosdep install --from-paths src -i
 catkin build
 ```
 
-Ne pas oublier de sourcer son workspace après chaque compilation (```source devel/setup.bash```). Je vous recommande de l'écrire dans votre .bashrc
+Ne pas oublier de sourcer son workspace après chaque compilation (```source devel/setup.bash```). 
 
 ## Utilisation
-
-
+Deux modes sont disponibles suivant la partie du TP :
 Lancement mode simulateur
 ```bash
 roslaunch rotors_gazebo mav_velocity_control_with_fake_driver.launch
