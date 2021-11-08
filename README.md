@@ -28,5 +28,5 @@ catkin build
 
 ##### Lancement mode simulateur
 ```bash
-roslaunch rotors_gazebo mav_velocity_control_with_fake_driver.launch
+roslaunch rotors_gazebo drone.launch
 ```
